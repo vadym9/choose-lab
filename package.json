@@ -8,12 +8,12 @@
         "start:prod": "webpack-dev-server --env=prod --mode production",
         "build": "webpack --env=dev --mode development",
         "build:prod": "webpack --env=prod --mode production",
-        "eslint:fix": "eslint --fix ./src/",
+        "fix": "eslint --fix ./src/",
         "check": "eslint ./src/"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run eslint:fix"
+            "pre-commit": "npm run fix"
         }
     },
     "browserslist": [

@@ -1,8 +1,107 @@
-.second-stage{
-  .container{
-    .items{
-      .item{
-        padding: 20px 30px;
+.second-stage {
+  .container {
+    .items {
+      margin-top: 200px;
+
+      .item {
+
+
+        .two-blocks {
+          padding: 20px 30px;
+
+          .left-block {
+
+            .title {
+              margin-top: 9px;
+
+
+            }
+          }
+
+          .right-block {}
+
+          .center-block {
+            flex: 1;
+
+            .two-columns {
+
+              // @media screen and (max-width: 1378px ){
+              //   justify-content: space-between;
+              // }
+              .left-column {
+                width: 331px;
+                margin-left: 23px;
+
+                .info {
+                  margin-top: 10px;
+
+                  .details-link {
+                    margin-left: 20px;
+                    text-decoration: none;
+                    color: $light-blue;
+                  }
+                }
+
+
+
+                @media screen and (max-width: 991px) {
+                  width: 462px;
+                }
+              }
+
+              .right-column {
+                // width:
+                margin-left: 144px;
+
+
+
+                @media screen and (max-width: 1418px) {
+                  margin-left: 10.8%;
+                  // margin-left: auto;
+                  // margin-left:77px;
+                }
+
+                @media screen and (max-width: 991px) {
+                  margin-left: 0px;
+                  // background-color: black;
+                }
+
+
+                input {
+                  height: 18px;
+                  width: 18px;
+                  margin: 0px;
+                  padding: 0px;
+                  background-color: none;
+                }
+
+
+
+                form {
+                  .form-title {
+                    text-transform: uppercase;
+                    color: $gray;
+                  }
+
+                  .three-options {
+                    margin-top: 10px;
+
+                    .label {
+                      .data {
+                        .price {
+                          color: $blue;
+                        }
+                      }
+                    }
+                  }
+                }
+
+
+
+              }
+            }
+          }
+        }
       }
     }
   }

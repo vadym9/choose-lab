@@ -4,48 +4,61 @@ import icon from '../img/map.svg';
 const App = () => (
   <section className="second-stage">
     <div className="container ">
-      <div className="status">status</div>
+      {/* <div className="status">status</div> */}
       <div className="items debug-red">
         <div className="item">
-          <div className="two-blocks">
-            <div className="block">
+          <div className="two-blocks flex debug-purple">
+            <div className="left-block debug-red">
               <img alt="item" src={icon} />
             </div>
-            <div className="block">
-              <div className="two-columns">
-                <div className="column">
+            <div className="center-block debug-green">
+              <div className="two-columns flex fw debug-blue">
+                <div className="left-column debug-green">
                   <div className="title">
-                    <h2>Title</h2>
+                    <h2>Plymouth Meeting, Pennsylvania Testing Laboratory</h2>
                   </div>
-                  <div className="info">
-                    32
+                  <div className="info flex">
+                    <p>60 miles</p>
+                    <a className="details-link" href="/#"><p className="details">View Details</p></a>
                   </div>
                 </div>
-                <div className="column">
-                  <div className="three-options">
-                    <form>
-                      <p>d</p>
-                      <div>
+                <div className="right-column debug-red">
+                  <form>
+                    <p className="form-title">Turn Around Time:</p>
+                    <div className="three-options flex">
+                      <label className="label flex" type="text" htmlFor="choice1">
+                        <input type="radio" id="choice1" name="option" value="1day" />
+                        <div className="data flex fd-column">
+                          <p className="time">1 Day</p>
+                          <p className="price"><strong>$ 1200.00</strong></p>
+                        </div>
+                      </label>
+                      <label className="label flex" type="text" htmlFor="choice2">
 
-                        <label type="text" htmlFor="choice1">
-                          1 Day
-                          <input type="radio" id="choice1" name="option" value="1day" />
-                        </label>
-                        <label type="text" htmlFor="choice2">
-                          2 Days
-                          <input type="radio" id="choice2" name="option" value="2days" />
-                        </label>
-                        <label type="text" htmlFor="choice3">
-                          1 Week
-                          <input type="radio" id="choice3" name="option" value="1week" />
-                        </label>
-                      </div>
-                    </form>
-                  </div>
+                        <input type="radio" id="choice2" name="option" value="2days" />
+                        <div className="data flex fd-column">
+                          <p className="time">2 Days</p>
+                          <p className="price"><strong>$ 900.00</strong></p>
+                        </div>
+                      </label>
+                      <label className="label flex" type="text" htmlFor="choice3">
+
+                        <input type="radio" id="choice3" name="option" value="1week" />
+                        <div className="data flex fd-column">
+                          <p className="time">1 Day</p>
+                          <p className="price"><strong>$ 150.00</strong></p>
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+
                 </div>
               </div>
             </div>
-
+            <div className="right-block">
+              {/* <label htmlFor="more" /> */}
+              <button type="button" className="more"> </button>
+            </div>
           </div>
 
 

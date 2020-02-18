@@ -1,11 +1,47 @@
 body{
   margin: 0px;
   padding: 0px;
+  
 }
 
 .container{
-  margin: 0px auto;
-  padding: 0 15.2%;
+  margin: 0 auto;
+  
+  padding: 0 40px;
+  max-width: 1338px;
+  // width: 69.7%;
+  @media only screen and (max-width: 1417px) and  (max-device-width: 1417px){
+    // max-width: 
+    // padding: 0 15.2%;
+  // padding: 0 500px;
+  // min-width: 69.7%;
+  // min-width: padding;
+  }
+
+  @media screen and (max-width: 991px) and (max-device-width: 991px) and (orientation: portrait) {
+    max-width: 690px;
+    // margin: 0px;
+    // width: 100%;
+    // margin: 0;
+  }
+}
+
+
+
+.flex{
+  display: flex;
+}
+
+.jcsb{
+  justify-content: space-between;
+}
+
+.fw{
+  flex-wrap: wrap;
+}
+
+.fd-column{
+  flex-direction: column;
 }
 
 .debug-red{
@@ -18,4 +54,10 @@ body{
 
 .debug-purple{
   border:1px solid purple;
+}
+
+
+
+.debug-blue{
+  border: 1px solid blue;
 }

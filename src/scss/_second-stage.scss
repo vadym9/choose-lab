@@ -32,6 +32,16 @@
                 width: 331px;
                 margin-left: 23px;
 
+                // @include media('<desktop'){
+                //   background: red;
+                // }
+
+                @include media('<laptop') {
+                  // background: black;
+                  width: 462px;
+                }
+
+
                 .info {
                   margin-top: 10px;
 
@@ -42,36 +52,30 @@
                   }
                 }
 
-
-                @include laptop{
-                  width: 462px;
-                }
                 
+
               }
 
               .right-column {
-                // width:
                 margin-left: 144px;
 
 
-
-                @media screen and (max-width: 1418px) {
-                  margin-left: 10.8%;
-                  // margin-left: auto;
-                  // margin-left:77px;
+                @include media('<desktop') {
+                  margin-left: 0;
+                  // background: black;
+                  flex:1;
                 }
 
-                @include laptop{
-                    margin-left: 0px;
-                  };
+                @include media('<laptop'){
+                  // margin-left: 10.8%;
+                  // border:20px solid green;
+                  // background: red;
+                }
 
-                
-
-                // @media screen and (max-width: 991px) {
-                //   margin-left: 0px;
-                //   // background-color: black;
-                // }
-
+                @include media('<phone') {
+                  // background: green;
+                  // border: 10px solid purple;
+                }
 
                 input {
                   height: 18px;
@@ -81,9 +85,8 @@
                   background-color: none;
                 }
 
-
-
                 form {
+                  width:315px;
                   .form-title {
                     text-transform: uppercase;
                     color: $gray;

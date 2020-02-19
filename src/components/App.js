@@ -22,7 +22,7 @@ const App = () => (
                     <a className="details-link" href="/#"><p className="details">View Details</p></a>
                   </div>
                 </div>
-                <div className="right-column debug-red">
+                <div className="right-column flex jcsa debug-red">
                   <form>
                     <p className="form-title">Turn Around Time:</p>
                     <div className="three-options flex">
@@ -55,9 +55,8 @@ const App = () => (
                 </div>
               </div>
             </div>
-            <div className="right-block">
-              {/* <label htmlFor="more" /> */}
-              <button type="button" className="more"> </button>
+            <div className="right-block debug-green">
+              <button type="button" className="btn-more more"> </button>
             </div>
           </div>
 

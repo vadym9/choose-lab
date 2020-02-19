@@ -25,11 +25,11 @@ const App = () => (
                 <div className="right-column flex jcsa debug-red">
                   <form>
                     <p className="form-title">Turn Around Time:</p>
-                    <div className="three-options flex">
+                    <div className="three-options flex jcsb">
                       <label className="label flex" type="text" htmlFor="choice1">
                         <input type="radio" id="choice1" name="option" value="1day" />
                         <div className="data flex fd-column">
-                          <p className="time">1 Day</p>
+                          <h3 className="time">1 Day</h3>
                           <p className="price"><strong>$ 1200.00</strong></p>
                         </div>
                       </label>
@@ -37,7 +37,7 @@ const App = () => (
 
                         <input type="radio" id="choice2" name="option" value="2days" />
                         <div className="data flex fd-column">
-                          <p className="time">2 Days</p>
+                          <h3 className="time">2 Days</h3>
                           <p className="price"><strong>$ 900.00</strong></p>
                         </div>
                       </label>
@@ -45,7 +45,7 @@ const App = () => (
 
                         <input type="radio" id="choice3" name="option" value="1week" />
                         <div className="data flex fd-column">
-                          <p className="time">1 Day</p>
+                          <h3 className="time">1 Week</h3>
                           <p className="price"><strong>$ 150.00</strong></p>
                         </div>
                       </label>

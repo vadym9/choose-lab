@@ -14,13 +14,14 @@
         }
       }
 
-      
+
 
       .center-block {
         flex: 1;
-        padding-top:9px;
-        @include media('<laptop'){
-          padding-top:10px;
+        padding-top: 9px;
+
+        @include media('<laptop') {
+          padding-top: 10px;
         }
 
         .two-columns {
@@ -85,9 +86,13 @@
             }
 
             @include media('<laptop') {
+              margin-left: 20px;
+              justify-content: flex-start;
+              
               // margin-left: 10.8%;
               // border:20px solid green;
               // background: red;
+
             }
 
             @include media('<phone') {
@@ -106,13 +111,31 @@
             form {
               width: 315px;
 
+              @include media('<laptop') {
+                flex-direction: row;
+                width: 427px;
+
+              }
+
               .form-title {
                 text-transform: uppercase;
                 color: $gray;
+
+                @include media('<laptop') {
+                  width: 85px;
+                  margin-top: 20px;
+                }
+
               }
 
               .three-options {
                 margin-top: 10px;
+
+                @include media('<laptop') {
+                  flex: 1;
+                  margin-top: 20px;
+                  margin-left: 30px;
+                }
 
                 .label {
                   .data {
@@ -130,15 +153,15 @@
 
 
           }
-          
+
         }
       }
 
       .right-block {
-        
-        @include media('<laptop'){
+
+        @include media('<laptop') {
           align-items: flex-start;
-          padding-top:5px;
+          padding-top: 5px;
         }
 
       }

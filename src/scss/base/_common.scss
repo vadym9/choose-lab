@@ -9,6 +9,10 @@ body{
   
   padding: 0 40px;
   max-width: 1338px;
+
+  @include media('<laptop'){
+    max-width: 690px;
+  }
   // width: 69.7%;
   @media only screen and (max-width: 1417px) and  (max-device-width: 1417px){
     // max-width: 
@@ -47,7 +51,6 @@ body{
 .aic{
   align-items: center;
 }
-
 
 .fd-column{
   flex-direction: column;

@@ -22,9 +22,9 @@ const App = () => (
                     <a className="details-link" href="/#"><p className="details">View Details</p></a>
                   </div>
                 </div>
-                <div className="right-column flex jcsa aic debug-red">
-                  <form>
-                    <p className="form-title">Turn Around Time:</p>
+                <div className="right-column flex jcsa debug-red">
+                  <form className="flex fd-column">
+                    <h4 className="form-title">Turn Around Time:</h4>
                     <div className="three-options flex jcsb">
                       <label className="label flex" type="text" htmlFor="choice1">
                         <input type="radio" id="choice1" name="option" value="1day" />

@@ -22,7 +22,7 @@ const App = () => (
                     <a className="details-link" href="/#"><p className="details">View Details</p></a>
                   </div>
                 </div>
-                <div className="right-column flex jcsa debug-red">
+                <div className="right-column flex jcsa aic debug-red">
                   <form>
                     <p className="form-title">Turn Around Time:</p>
                     <div className="three-options flex jcsb">
@@ -55,7 +55,7 @@ const App = () => (
                 </div>
               </div>
             </div>
-            <div className="right-block debug-green">
+            <div className="right-block flex aic debug-green">
               <button type="button" className="btn-more more"> </button>
             </div>
           </div>

@@ -1,4 +1,21 @@
 .btn-more{
   background: none;
-  border:1px solid blue;
+  position: relative;
+  width: 36px;
+  height: 34px;
+  border: solid 2px $light-blue;
+  padding:0px;
+  margin:0px;
+  cursor: pointer;
+
+  &:after{
+    position: absolute;
+    font-family: 'icomoon';
+    content: '\ea3e';
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: $light-blue;
+  }
 }

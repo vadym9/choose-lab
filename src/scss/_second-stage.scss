@@ -1,241 +1,203 @@
 .second-stage .container .items {
   margin-top: 200px;
 
-  @include media('<laptop'){
+  @include media('<laptop') {
     margin-top: 148px;
   }
 
-  @include media('<phone'){
-    margin-top:138px;
+  @include media('<phone') {
+    margin-top: 138px;
   }
 
-  .item {
-    .two-blocks {
-      padding: 20px 30px;
-      border: solid 2px #e4e8f0;
-      @include media('<phone'){
-        padding: 20px 20px;
-        flex-direction: column;
+  .item .two-blocks {
+    padding: 20px 30px;
+    border: solid 2px $border-gray;
+
+    @include media('<phone') {
+      padding: 20px 20px;
+      flex-direction: column;
+    }
+
+    .left-block img {
+      width: 42px;
+
+      @include media('<laptop') {
+        width: 44px;
       }
 
-      .left-block {
-        
-        img{
-          width: 42px;
+      @include media('<phone') {
+        width: 34px;
+      }
+    }
 
-          @include media('<laptop'){
-            width: 44px;
-          }
 
-          @include media('<phone'){
-            width:34px;
-          }
-          
-        }
-        // .title {
-        //   margin-top: 9px;
-        // }
+    .center-block {
+      flex: 1;
+      padding-top: 9px;
 
+      @include media('<laptop') {
+        padding-top: 10px;
       }
 
+      .two-columns {
 
-
-      .center-block {
-        flex: 1;
-        padding-top: 9px;
-
-        @include media('<laptop') {
-          padding-top: 10px;
+        @include media('<phone') {
+          flex-direction: column;
         }
 
-        .two-columns {
-          
-          @include media('<phone'){
-            flex-direction: column;
+        .left-column {
+          width: 331px;
+          margin-left: 23px;
+
+          @include media('<laptop') {
+            margin-left: 20px;
+            width: 462px;
           }
-          // @media screen and (max-width: 1378px ){
-          //   justify-content: space-between;
-          // }
-          .left-column {
-            width: 331px;
 
-            margin-left: 23px;
+          @include media('<phone') {
+            margin-left: 0px;
+            min-width: 220px;
+            max-width: 462px;
+            width: 100%;
+          }
 
-            // @include media('<desktop'){
-            //   background: red;
-            // }
+          .info {
+            margin-top: 10px;
 
-            @include media('<laptop') {
-              // background: black;
+            .miles {
+              color: $light-gray;
+            }
+
+            .details-link {
               margin-left: 20px;
-              width: 462px;
-            }
+              text-decoration: none;
+              color: $light-blue;
 
-            @include media('<phone'){
-              margin-left: 0px;
-              min-width:220px; //260
-              max-width: 462px;
-              width: 100%;
-            }
-            
-            .info {
-              margin-top: 10px;
+              .details {
+                position: relative;
+                padding-right: 18px;
 
-              .miles{
-                color: $light-gray;
-              }
-
-              .details-link {
-                margin-left: 20px;
-                text-decoration: none;
-                color: $light-blue;
-
-                .details {
-                  position: relative;
-                  padding-right: 18px;
-
-                  &:after {
-                    position: absolute;
-                    font-family: "icomoon";
-                    content: "\ea3b";
-                    font-size: 10px;
-                    right: 0px;
-                    top: 50%;
-                    transform: translateY(-50%)
-                  }
-
+                &:after {
+                  position: absolute;
+                  font-family: "icomoon";
+                  content: "\ea3b";
+                  font-size: 10px;
+                  right: 0px;
+                  top: 50%;
+                  transform: translateY(-50%)
                 }
               }
             }
+          }
+        }
 
+        .right-column {
+          margin-left: 144px;
 
-
+          @include media('<desktop') {
+            margin-left: 0;
+            flex: 1;
           }
 
-          .right-column {
-            margin-left: 144px;
+          @include media('<laptop') {
+            margin-left: 20px;
+            justify-content: flex-start;
+          }
 
+          @include media('<phone') {
+            margin-left: 0px;
+          }
 
-            @include media('<desktop') {
-              margin-left: 0;
-              // background: black;
-              flex: 1;
-            }
+          input {
+            height: 18px;
+            width: 18px;
+            margin: 0px;
+            padding: 0px;
+            background-color: none;
+          }
+
+          form {
+            width: 315px;
 
             @include media('<laptop') {
-              margin-left: 20px;
-              justify-content: flex-start;
-              
-              // margin-left: 10.8%;
-              // border:20px solid green;
-              // background: red;
-
+              flex-direction: row;
+              width: 427px;
             }
 
             @include media('<phone') {
-              margin-left: 0px;
-              // flex:1;
-              // background: green;
-              // border: 10px solid purple;
+              flex-direction: column;
+              flex: 1;
+              width: auto;
             }
 
-            input {
-              height: 18px;
-              width: 18px;
-              margin: 0px;
-              padding: 0px;
-              background-color: none;
-            }
-
-            form {
-              width: 315px;
+            .form-title {
+              text-transform: uppercase;
+              color: $gray;
 
               @include media('<laptop') {
-                flex-direction: row;
-                width: 427px;
-
+                width: 85px;
+                margin-top: 20px;
               }
 
-              @include media('<phone'){
-                flex-direction: column;
-                flex:1;
+              @include media('<phone') {
                 width: auto;
-                // width: auto;
+              }
+            }
+
+            .three-options {
+              margin-top: 10px;
+
+              @include media('<laptop') {
+                flex: 1;
+                margin-top: 20px;
+                margin-left: 30px;
               }
 
-              .form-title {
-                text-transform: uppercase;
-                color: $gray;
-
-                @include media('<laptop') {
-                  width: 85px;
-                  margin-top: 20px;
-                }
-
-                @include media('<phone'){
-                  width: auto;
-
-                }
-
-              }
-
-              .three-options {
+              @include media('<phone') {
+                margin-left: 0px;
+                flex-direction: column;
                 margin-top: 10px;
+              }
 
-                @include media('<laptop') {
-                  flex: 1;
-                  margin-top: 20px;
-                  margin-left: 30px;
+              .label {
+
+                @include media('<phone') {
+                  padding: 10px 0;
+                  align-items: center;
+                  border-bottom: solid 1px $border-gray;
+
+                  &:first-child {
+                    border-top: solid 1px $border-gray;
+                    ;
+                  }
                 }
 
-                @include media('<phone'){
-                  margin-left:0px;
-                  flex-direction: column;
-                  margin-top:10px;
+                .data {
+                  margin-left: 10px;
 
-                  
-                }
-
-                .label {
-                  
-                  @include media('<phone'){
-                    padding: 10px 0;
-                    align-items: center;
-                    border-bottom: solid 1px #e4e8f0;
-                    &:first-child{
-                      border-top: solid 1px #e4e8f0;;
-                    }
+                  @include media('<phone') {
+                    flex-direction: row;
+                    flex: 1;
+                    justify-content: space-between;
                   }
 
-                  .data {
-                    margin-left: 10px;
+                  .time {
+                    color: $blue;
+                  }
 
-                    @include media('<phone'){
-                      flex-direction: row;
-                      flex: 1;
-                      justify-content: space-between;
-                      
-                    }
-                    .time{
-                      color: $blue;
-                    }
-                    .price {
-                      margin-top: 10px;
-                      color: $blue;
+                  .price {
+                    margin-top: 10px;
+                    color: $blue;
 
-                      @include media('<phone'){
-                        margin-top: 0px;
-                      }
+                    @include media('<phone') {
+                      margin-top: 0px;
                     }
+
                   }
                 }
               }
             }
-
-
-
           }
-
         }
       }
 
@@ -245,9 +207,10 @@
           align-items: flex-start;
           padding-top: 5px;
         }
-        @include media('<phone'){
+
+        @include media('<phone') {
           align-items: center;
-          padding-top:20px;
+          padding-top: 20px;
           justify-content: center;
         }
       }

@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 
+
+
 const hmr = mode => {
     return mode === "dev"
         ? { hotModuleRepl: new webpack.HotModuleReplacementPlugin() }

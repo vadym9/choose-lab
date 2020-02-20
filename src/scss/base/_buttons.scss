@@ -1,29 +1,30 @@
-.btn-more{
+.btn-more {
   background: none;
   position: relative;
   width: 36px;
   height: 34px;
   border: solid 2px $light-blue;
-  padding:0px;
-  margin:0px;
+  padding: 0px;
+  margin: 0px;
   cursor: pointer;
 
-  @include media('<phone'){
-    display:none;
+  @include media('<phone') {
+    display: none;
   }
 
-  &:after{
+  &:after {
     position: absolute;
     font-family: 'icomoon';
     content: '\ea3e';
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 16px;
     color: $light-blue;
   }
 }
-.btn-view-more{
+
+.btn-view-more {
   display: none;
   border: none;
   background: none;
@@ -31,7 +32,8 @@
   letter-spacing: 0.4px;
   color: $light-blue;
   cursor: pointer;
-  @include media('<phone'){
+
+  @include media('<phone') {
     display: block;
   }
 }

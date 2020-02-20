@@ -6,36 +6,13 @@ body{
 
 .container{
   margin: 0 auto;
-  
   padding: 0 40px;
   max-width: 1338px;
 
-  @include media('<laptop'){
-    // max-width: 690px;
-  }
-
   @include media('<phone'){
     padding: 0 20px;
-
   }
-  // width: 69.7%;
-  // @media only screen and (max-width: 1417px) and  (max-device-width: 1417px){
-  //   // max-width: 
-  //   // padding: 0 15.2%;
-  // // padding: 0 500px;
-  // // min-width: 69.7%;
-  // // min-width: padding;
-  // }
-
-  // @media screen and (max-width: 991px) and (max-device-width: 991px) and (orientation: portrait) {
-  //   max-width: 690px;
-  //   // margin: 0px;
-  //   // width: 100%;
-  //   // margin: 0;
-  // }
 }
-
-
 
 .flex{
   display: flex;
@@ -72,8 +49,6 @@ body{
 .debug-purple{
   border:1px solid purple;
 }
-
-
 
 .debug-blue{
   border: 1px solid blue;

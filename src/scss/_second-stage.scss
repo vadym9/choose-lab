@@ -5,13 +5,29 @@
     .two-blocks {
       padding: 20px 30px;
 
+      @include media('<phone'){
+        padding: 20px 30px;
+        flex-direction: column;
+      }
+
       .left-block {
+        
+        img{
+          width: 42px;
 
-        .title {
-          margin-top: 9px;
+          @include media('<laptop'){
+            width: 44px;
+          }
 
-
+          @include media('<phone'){
+            width:34px;
+          }
+          
         }
+        // .title {
+        //   margin-top: 9px;
+        // }
+
       }
 
 
@@ -44,7 +60,11 @@
               width: 462px;
             }
 
-
+            @include media('<phone'){
+              margin-left: 0px;
+              min-width:280px;
+            }
+            
             .info {
               margin-top: 10px;
 
@@ -96,6 +116,8 @@
             }
 
             @include media('<phone') {
+              margin-left: 0px;
+              // flex:1;
               // background: green;
               // border: 10px solid purple;
             }
@@ -117,6 +139,13 @@
 
               }
 
+              @include media('<phone'){
+                flex-direction: column;
+                flex:1;
+                width: auto;
+                // width: auto;
+              }
+
               .form-title {
                 text-transform: uppercase;
                 color: $gray;
@@ -124,6 +153,11 @@
                 @include media('<laptop') {
                   width: 85px;
                   margin-top: 20px;
+                }
+
+                @include media('<phone'){
+                  width: auto;
+
                 }
 
               }
@@ -137,13 +171,42 @@
                   margin-left: 30px;
                 }
 
+                @include media('<phone'){
+                  margin-left:0px;
+                  flex-direction: column;
+                  margin-top:10px;
+
+                  
+                }
+
                 .label {
+
+                  @include media('<phone'){
+                    padding: 10px 0;
+                   
+                    border-bottom: solid 1px #e4e8f0;
+                    &:first-child{
+                      border-top: solid 1px #e4e8f0;;
+                    }
+                  }
+
                   .data {
                     margin-left: 10px;
+
+                    @include media('<phone'){
+                      flex-direction: row;
+                      flex: 1;
+                      justify-content: space-between;
+                      
+                    }
 
                     .price {
                       margin-top: 10px;
                       color: $blue;
+
+                      @include media('<phone'){
+                        margin-top: 0px;
+                      }
                     }
                   }
                 }

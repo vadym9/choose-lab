@@ -36,9 +36,13 @@ const App = () => (
                       <label className="label flex" type="text" htmlFor="choice2">
 
                         <input type="radio" id="choice2" name="option" value="2days" />
-                        <div className="data flex fd-column">
+                        <div className="data flex fd-column debug-purple">
+
                           <h3 className="time">2 Days</h3>
+
+
                           <p className="price"><strong>$ 900.00</strong></p>
+
                         </div>
                       </label>
                       <label className="label flex" type="text" htmlFor="choice3">

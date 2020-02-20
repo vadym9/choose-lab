@@ -8,6 +8,10 @@
   margin:0px;
   cursor: pointer;
 
+  @include media('<phone'){
+    display:none;
+  }
+
   &:after{
     position: absolute;
     font-family: 'icomoon';
@@ -17,5 +21,17 @@
     transform: translate(-50%, -50%);
     font-size: 16px;
     color: $light-blue;
+  }
+}
+.btn-view-more{
+  display: none;
+  border: none;
+  background: none;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  color: $light-blue;
+  cursor: pointer;
+  @include media('<phone'){
+    display: block;
   }
 }

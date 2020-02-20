@@ -1,12 +1,20 @@
 .second-stage .container .items {
   margin-top: 200px;
 
+  @include media('<laptop'){
+    margin-top: 148px;
+  }
+
+  @include media('<phone'){
+    margin-top:138px;
+  }
+
   .item {
     .two-blocks {
       padding: 20px 30px;
-
+      border: solid 2px #e4e8f0;
       @include media('<phone'){
-        padding: 20px 30px;
+        padding: 20px 20px;
         flex-direction: column;
       }
 
@@ -41,7 +49,10 @@
         }
 
         .two-columns {
-
+          
+          @include media('<phone'){
+            flex-direction: column;
+          }
           // @media screen and (max-width: 1378px ){
           //   justify-content: space-between;
           // }
@@ -62,11 +73,17 @@
 
             @include media('<phone'){
               margin-left: 0px;
-              min-width:280px;
+              min-width:220px; //260
+              max-width: 462px;
+              width: 100%;
             }
             
             .info {
               margin-top: 10px;
+
+              .miles{
+                color: $light-gray;
+              }
 
               .details-link {
                 margin-left: 20px;
@@ -180,10 +197,10 @@
                 }
 
                 .label {
-
+                  
                   @include media('<phone'){
                     padding: 10px 0;
-                   
+                    align-items: center;
                     border-bottom: solid 1px #e4e8f0;
                     &:first-child{
                       border-top: solid 1px #e4e8f0;;
@@ -199,7 +216,9 @@
                       justify-content: space-between;
                       
                     }
-
+                    .time{
+                      color: $blue;
+                    }
                     .price {
                       margin-top: 10px;
                       color: $blue;
@@ -226,7 +245,11 @@
           align-items: flex-start;
           padding-top: 5px;
         }
-
+        @include media('<phone'){
+          align-items: center;
+          padding-top:20px;
+          justify-content: center;
+        }
       }
     }
   }

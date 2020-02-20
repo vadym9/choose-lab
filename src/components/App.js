@@ -5,24 +5,24 @@ const App = () => (
   <section className="second-stage">
     <div className="container ">
       {/* <div className="status">status</div> */}
-      <div className="items debug-red">
+      <div className="items">
         <div className="item">
-          <div className="two-blocks flex debug-purple">
-            <div className="left-block debug-red">
+          <div className="two-blocks flex">
+            <div className="left-block">
               <img alt="item" src={icon} />
             </div>
-            <div className="center-block debug-green">
-              <div className="two-columns flex fw debug-blue">
-                <div className="left-column debug-green">
+            <div className="center-block">
+              <div className="two-columns flex fw">
+                <div className="left-column">
                   <div className="title">
                     <h2>Plymouth Meeting, Pennsylvania Testing Laboratory</h2>
                   </div>
                   <div className="info flex">
-                    <p>60 miles</p>
+                    <p className="miles">60 miles</p>
                     <a className="details-link" href="/#"><p className="details">View Details</p></a>
                   </div>
                 </div>
-                <div className="right-column flex jcsa debug-red">
+                <div className="right-column flex jcsa">
                   <form className="flex fd-column">
                     <h4 className="form-title">Turn Around Time:</h4>
                     <div className="three-options flex jcsb">
@@ -36,7 +36,7 @@ const App = () => (
                       <label className="label flex" type="text" htmlFor="choice2">
 
                         <input type="radio" id="choice2" name="option" value="2days" />
-                        <div className="data flex fd-column debug-purple">
+                        <div className="data flex fd-column">
 
                           <h3 className="time">2 Days</h3>
 
@@ -59,19 +59,15 @@ const App = () => (
                 </div>
               </div>
             </div>
-            <div className="right-block flex aic debug-green">
+            <div className="right-block flex aic">
               <button type="button" className="btn-more more"> </button>
+              <button type="button" className="btn-view-more"><p>View more</p></button>
             </div>
           </div>
 
 
         </div>
-        <div className="item">
-          3
-        </div>
-        <div className="item">
-          3
-        </div>
+
       </div>
     </div>
   </section>

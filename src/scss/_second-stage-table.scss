@@ -1,0 +1,83 @@
+.second-stage-table .container .items .item {
+  padding: 20px 30px;
+
+  .first-column {
+  }
+
+  .second-column {
+    margin-top: 9px;
+    margin-left: 23px;
+    width: 331px;
+
+    .details {
+      margin-top: 10px;
+
+      a {
+        text-decoration: none;
+      }
+
+      p {
+        color: $light-gray;
+      }
+
+      .link-view-details {
+
+        margin-left: 20px;
+        color: $light-blue;
+        position: relative;
+
+        &:after {
+          position: relative;
+          font-family: "icomoon";
+          content: "\ea3b";
+          font-size: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -8px;
+        }
+      }
+    }
+  }
+
+  .thirld-column {
+    margin-top: 9px;
+    margin-left: 144px;
+    width: 315px;
+
+    .options {
+      margin-top: 10px;
+
+      .option {
+        input {
+          height: 18px;
+          width: 18px;
+        }
+
+        h3,
+        p {
+          color: $blue;
+        }
+
+        p {
+          margin-top: 10px;
+        }
+
+        .option-text {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .options-title {
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
+
+  .fourth-column {
+    margin-left: 393px;
+    .more{
+      margin-top:31px;
+    }
+  }
+}

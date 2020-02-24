@@ -10,24 +10,29 @@
   }
 
   .item .two-blocks {
-    padding: 20px 30px;
-    border: solid 2px $border-gray;
+    padding: 20px 20px;
+    border: solid 1px $border-gray;
 
     @include media('<phone') {
       padding: 20px 20px;
       flex-direction: column;
     }
 
-    .left-block img {
-      width: 42px;
+    .left-block {
+      margin-left: 10px;
 
-      @include media('<laptop') {
-        width: 44px;
+      img {
+        width: 42px;
+
+        @include media('<laptop') {
+          width: 44px;
+        }
+
+        @include media('<phone') {
+          width: 34px;
+        }
       }
 
-      @include media('<phone') {
-        width: 34px;
-      }
     }
 
 
@@ -61,6 +66,12 @@
             width: 100%;
           }
 
+          .title {
+            h2 {
+              letter-spacing: 1px;
+            }
+          }
+
           .info {
             margin-top: 10px;
 
@@ -76,6 +87,7 @@
               .details {
                 position: relative;
                 padding-right: 18px;
+                letter-spacing: 0.7px;
 
                 &:after {
                   position: absolute;
@@ -188,6 +200,7 @@
                   .price {
                     margin-top: 10px;
                     color: $blue;
+                    letter-spacing: 1.3px;
 
                     @include media('<phone') {
                       margin-top: 0px;
@@ -202,6 +215,8 @@
       }
 
       .right-block {
+        // margin-right: 41px;
+        padding-right: 4px;
 
         @include media('<laptop') {
           align-items: flex-start;

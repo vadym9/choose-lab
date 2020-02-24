@@ -1,83 +1,108 @@
-.second-stage-table .container .items .item {
-  padding: 20px 30px;
+.second-stage-table .container .items {
 
-  .first-column {
-  }
 
-  .second-column {
-    margin-top: 9px;
-    margin-left: 23px;
-    width: 331px;
+  margin-top: 200px;
+  .item {
+    padding: 20px 20px;
+    border: solid 1px $border-gray;
 
-    .details {
-      margin-top: 10px;
+    .first-column {
+      margin-left: 10px;
+      img {
+        
+        width: 42px;
+        height: 42px;
+      }
+    }
 
-      a {
-        text-decoration: none;
+    .second-column {
+      margin-top: 9px;
+      margin-left: 23px;
+      width: 331px;
+      .name h2{
+        
+        letter-spacing: 1px;
       }
 
-      p {
-        color: $light-gray;
-      }
+      .details {
+        margin-top: 10px;
 
-      .link-view-details {
+        a {
+          text-decoration: none;
+        }
 
-        margin-left: 20px;
-        color: $light-blue;
-        position: relative;
+        p {
+          color: $light-gray;
+        }
 
-        &:after {
+        
+        .link-view-details {
+
+          margin-left: 20px;
+          color: $light-blue;
           position: relative;
-          font-family: "icomoon";
-          content: "\ea3b";
-          font-size: 12px;
-          top: 50%;
-          transform: translateY(-50%);
-          right: -8px;
-        }
-      }
-    }
-  }
-
-  .thirld-column {
-    margin-top: 9px;
-    margin-left: 144px;
-    width: 315px;
-
-    .options {
-      margin-top: 10px;
-
-      .option {
-        input {
-          height: 18px;
-          width: 18px;
-        }
-
-        h3,
-        p {
-          color: $blue;
-        }
-
-        p {
-          margin-top: 10px;
-        }
-
-        .option-text {
-          margin-left: 10px;
+          letter-spacing: 0.8px;
+          &:after {
+            position: relative;
+            font-family: "icomoon";
+            content: "\ea3b";
+            font-size: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -8px;
+          }
         }
       }
     }
 
-    .options-title {
-      text-transform: uppercase;
-      color: $gray;
-    }
-  }
+    .thirld-column {
+      margin-top: 9px;
+      margin-left: 144px;
+      width: 315px;
+      
+      .options {
+        margin-top: 10px;
 
-  .fourth-column {
-    margin-left: 393px;
-    .more{
-      margin-top:31px;
+        .option {
+          input {
+            height: 18px;
+            width: 18px;
+            margin:0px;
+          }
+
+          h3,
+          p {
+            color: $blue;
+            
+          }
+
+
+          p {
+            margin-top: 10px;
+            letter-spacing: 1.4px;
+          }
+
+          .option-text {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .options-title {
+        text-transform: uppercase;
+        color: $gray;
+      }
+    }
+
+    .fourth-column {
+      // margin-left: 393px;
+      flex:1;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right:4px;
+      .more {
+        // margin-top: 31px;
+      }
     }
   }
 }

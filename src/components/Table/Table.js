@@ -4,14 +4,11 @@ import map from '../../img/map.svg';
 const Table = () => (
   <div className="second-stage-table">
     <div className="container">
-      <div>
-        <h1>d</h1>
-      </div>
       <table className="items">
 
         <tbody>
-          <tr className="item flex debug-purple">
-            <td className="first-column debug-green">
+          <tr className="item flex">
+            <td className="first-column">
               <tr>
                 <td>
                   <img alt="map" src={map} />
@@ -19,23 +16,23 @@ const Table = () => (
               </tr>
 
             </td>
-            <td className="second-column debug-purple">
+            <td className="second-column">
               <tr>
-                <td className="name debug-green">
+                <td className="name">
                   <h2>Plymouth Meeting, Pennsylvania Testing Laboratory</h2>
                 </td>
               </tr>
               <tr className=" ">
-                <td className="details flex debug-red">
+                <td className="details flex">
                   <p>60 miles</p>
-                  <a href="/#"><p className="link-view-details">View details</p></a>
+                  <a href="/#"><p className="link-view-details">View Details</p></a>
                 </td>
 
               </tr>
             </td>
-            <td className="thirld-column flex fd-column debug-red">
+            <td className="thirld-column flex fd-column">
               <tr>
-                <td className="options-title debug-purple">
+                <td className="options-title">
                   <h4>Turn around time:</h4>
                 </td>
               </tr>
@@ -106,13 +103,9 @@ const Table = () => (
                 </td>
               </tr>
             </td>
-            <td className="fourth-column debug-blue">
+            <td className="fourth-column flex">
               <button type="button" className="btn-more more"> </button>
             </td>
-          </tr>
-          <tr>
-            <td>first row first col</td>
-            <td>1 2</td>
           </tr>
         </tbody>
       </table>

@@ -1,12 +1,11 @@
 body{
   margin: 0px;
   padding: 0px;
-  
 }
 
 .container{
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 39px;
   max-width: 1338px;
 
   @include media('<phone'){

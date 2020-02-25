@@ -7,7 +7,7 @@ const App = () => (
       {/* <div className="status">status</div> */}
       <div className="items">
         <div className="item">
-          <div className="two-blocks flex">
+          <div className="three-blocks flex">
             <div className="left-block">
               <img alt="item" src={icon} />
             </div>

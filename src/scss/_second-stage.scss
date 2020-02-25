@@ -1,6 +1,6 @@
 .second-stage .container .items {
   margin-top: 200px;
-
+  
   @include media('<laptop') {
     margin-top: 148px;
   }
@@ -9,8 +9,8 @@
     margin-top: 138px;
   }
 
-  .item .two-blocks {
-    padding: 20px 20px;
+  .item .three-blocks {
+    padding: 20px;
     border: solid 1px $border-gray;
 
     @include media('<phone') {
@@ -19,13 +19,16 @@
     }
 
     .left-block {
-      margin-left: 10px;
+      
+
 
       img {
         width: 42px;
+        margin-left: 10px;
 
         @include media('<laptop') {
           width: 44px;
+          margin-left:0;
         }
 
         @include media('<phone') {
@@ -68,7 +71,12 @@
 
           .title {
             h2 {
-              letter-spacing: 1px;
+              letter-spacing: 0.6px;
+              
+              @include media('<laptop'){
+                font-size: 16px;
+                line-height: 1.5;
+              }
             }
           }
 
@@ -129,16 +137,17 @@
           }
 
           form {
-            width: 315px;
+            min-width: 315px;
 
             @include media('<laptop') {
               flex-direction: row;
-              width: 427px;
+              min-width: 427px;
             }
 
             @include media('<phone') {
               flex-direction: column;
               flex: 1;
+              min-width: 240px;
               width: auto;
             }
 
@@ -149,6 +158,8 @@
               @include media('<laptop') {
                 width: 85px;
                 margin-top: 20px;
+                letter-spacing: 0px;
+                line-height: 1.5;
               }
 
               @include media('<phone') {
@@ -195,12 +206,22 @@
 
                   .time {
                     color: $blue;
+
+                    @include media('<laptop'){
+                      letter-spacing: 0.1px;
+                      line-height: 1.2;
+                    }
                   }
 
                   .price {
                     margin-top: 10px;
                     color: $blue;
                     letter-spacing: 1.3px;
+
+                    @include media('<laptop'){
+                      margin-top:5px;
+
+                    }
 
                     @include media('<phone') {
                       margin-top: 0px;
@@ -214,20 +235,23 @@
         }
       }
 
-      .right-block {
-        // margin-right: 41px;
-        padding-right: 4px;
+      
+    }
 
-        @include media('<laptop') {
-          align-items: flex-start;
-          padding-top: 5px;
-        }
+    .right-block {
+      margin-right: 4px;
+      // padding-right: 4px;
 
-        @include media('<phone') {
-          align-items: center;
-          padding-top: 20px;
-          justify-content: center;
-        }
+      @include media('<laptop') {
+        align-items: flex-start;
+        margin-right: 0;
+        padding-top: 5px;
+      }
+
+      @include media('<phone') {
+        align-items: center;
+        padding-top: 20px;
+        justify-content: center;
       }
     }
   }

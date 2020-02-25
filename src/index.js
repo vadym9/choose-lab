@@ -8,14 +8,12 @@ import {
 import Table from './components/Table/Table';
 import App from './components/App';
 
-
-// import 'include-media';
 import './scss/style.scss';
 
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path="/" component={App} />
+      <Route path="/" exact component={App} />
       <Route path="/table" component={Table} />
     </Switch>
   </Router>,

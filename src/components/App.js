@@ -26,28 +26,27 @@ const App = () => (
                   <form className="flex fd-column">
                     <h4 className="form-title">Turn Around Time:</h4>
                     <div className="three-options flex jcsb">
+                      <input type="radio" id="choice1" name="option" value="1day" />
+
                       <label className="label flex" type="text" htmlFor="choice1">
-                        <input type="radio" id="choice1" name="option" value="1day" />
                         <div className="data flex fd-column">
                           <h3 className="time">1 Day</h3>
                           <p className="price"><strong>$ 1200.00</strong></p>
                         </div>
                       </label>
+
+                      <input type="radio" id="choice2" name="option" value="2days" />
+
                       <label className="label flex" type="text" htmlFor="choice2">
-
-                        <input type="radio" id="choice2" name="option" value="2days" />
                         <div className="data flex fd-column">
-
                           <h3 className="time">2 Days</h3>
-
-
                           <p className="price"><strong>$ 900.00</strong></p>
-
                         </div>
                       </label>
-                      <label className="label flex" type="text" htmlFor="choice3">
 
-                        <input type="radio" id="choice3" name="option" value="1week" />
+                      <input type="radio" id="choice3" name="option" value="1week" />
+
+                      <label className="label flex" type="text" htmlFor="choice3">
                         <div className="data flex fd-column">
                           <h3 className="time">1 Week</h3>
                           <p className="price"><strong>$ 150.00</strong></p>

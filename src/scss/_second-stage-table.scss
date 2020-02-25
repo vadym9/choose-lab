@@ -1,15 +1,14 @@
 .second-stage-table .container .items {
-
-
   margin-top: 200px;
+
   .item {
     padding: 20px 20px;
     border: solid 1px $border-gray;
 
     .first-column {
       margin-left: 10px;
+
       img {
-        
         width: 42px;
         height: 42px;
       }
@@ -19,8 +18,8 @@
       margin-top: 9px;
       margin-left: 23px;
       width: 331px;
-      .name h2{
-        
+
+      .name h2 {
         letter-spacing: 1px;
       }
 
@@ -35,13 +34,12 @@
           color: $light-gray;
         }
 
-        
         .link-view-details {
-
           margin-left: 20px;
           color: $light-blue;
           position: relative;
           letter-spacing: 0.8px;
+
           &:after {
             position: relative;
             font-family: "icomoon";
@@ -59,7 +57,7 @@
       margin-top: 9px;
       margin-left: 144px;
       width: 315px;
-      
+
       .options {
         margin-top: 10px;
 
@@ -67,15 +65,13 @@
           input {
             height: 18px;
             width: 18px;
-            margin:0px;
+            margin: 0px;
           }
 
           h3,
           p {
             color: $blue;
-            
           }
-
 
           p {
             margin-top: 10px;
@@ -95,14 +91,10 @@
     }
 
     .fourth-column {
-      // margin-left: 393px;
-      flex:1;
+      flex: 1;
       justify-content: flex-end;
       align-items: center;
-      margin-right:4px;
-      .more {
-        // margin-top: 31px;
-      }
+      margin-right: 4px;
     }
   }
 }

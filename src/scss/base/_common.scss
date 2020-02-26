@@ -1,54 +1,38 @@
-body{
+body {
   margin: 0px;
   padding: 0px;
 }
 
-.container{
+.container {
   margin: 0 auto;
   padding: 0 39px;
   max-width: 1338px;
 
-  @include media('<phone'){
+  @include media('<phone') {
     padding: 0 20px;
   }
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.jcsb{
+.jcsb {
   justify-content: space-between;
 }
 
-.jcsa{
+.jcsa {
   justify-content: space-around;
 }
 
-.fw{
+.fw {
   flex-wrap: wrap;
 }
 
-.aic{
+.aic {
   align-items: center;
 }
 
-.fd-column{
+.fd-column {
   flex-direction: column;
-}
-
-.debug-red{
-  border:1px solid red;
-}
-
-.debug-green{
-  border:1px solid green;
-}
-
-.debug-purple{
-  border:1px solid purple;
-}
-
-.debug-blue{
-  border: 1px solid blue;
 }

@@ -10,15 +10,11 @@ $phone: 768px;
 $laptop: 992px;
 $desktop: 1418px;
 
-$breakpoints: (
-    'phone': $phone,
+$breakpoints: ('phone': $phone,
     'laptop': $laptop,
-    'desktop': $desktop
-);
+    'desktop': $desktop);
 
-// Keywords
-$media-expressions: (
-    'screen': 'screen',
+$media-expressions: ('screen': 'screen',
     'print': 'print',
     'handheld': 'handheld',
     'landscape': '(orientation: landscape)',

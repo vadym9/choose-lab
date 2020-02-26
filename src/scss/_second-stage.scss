@@ -188,14 +188,6 @@
                 margin-top: 10px;
               }
 
-
-
-
-              // &#emsl-id {
-              //   label:first-child() {
-              //     border: 2px solid red !important;
-              //   }
-              // }
               .radio-wrapper {
 
                 input[type='radio'] {
@@ -207,8 +199,6 @@
                   padding: 0px;
 
                   +label {
-
-
                     position: relative;
                     display: inline-block;
                     cursor: pointer;
@@ -241,7 +231,6 @@
 
                       @include media('<phone') {
                         top: 4;
-                        // transform: translateY(-50%);
                         left: -14px;
                       }
                     }
@@ -265,78 +254,67 @@
                   padding: 9px 0;
                   align-items: center;
                   border-bottom: solid 1px $border-gray;
-                  // width: 100%;
 
                   &:first-child {
                     border-top: solid 1px $border-gray;
-                    // background-color: gray;
                   }
                 }
-                  .label {
 
+                .label {
 
-                    // &:nth-child(4) {
-                    //   border-top: solid 4px red;
-                    // }
+                  @include media('<phone') {
+                    width: 100%;
+                  }
 
-                    @include media('<phone') {
-                      width: 100%;
+                  .data {
+                    margin-left: 10px;
+
+                    // background-color: red;
+                    @include media('<laptop') {
+                      margin-left: 10px;
                     }
 
-                    .data {
+                    @include media('<phone') {
+                      flex-direction: row;
+                      flex: 1;
+                      justify-content: space-between;
+                      align-items: center;
                       margin-left: 10px;
-                      // background-color: red;
-                      @include media('<laptop'){
-                        margin-left: 10px;
+                    }
+
+                    .time {
+                      color: $blue;
+
+                      @include media('<laptop') {
+                        line-height: 1.1;
                       }
+
                       @include media('<phone') {
-                        flex-direction: row;
-                        flex: 1;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-left: 10px;
-                        // margin-left: 28px;
+                        line-height: 1.40;
+                        letter-spacing: 1px;
+                      }
+                    }
+
+                    .price {
+                      margin-top: 10px;
+                      color: $blue;
+                      letter-spacing: 1.3px;
+
+                      @include media('<laptop') {
+                        margin-top: 5px;
+                        line-height: 1.9;
+                        letter-spacing: 1px;
                       }
 
-                      .time {
-                        color: $blue;
-
-                        @include media('<laptop') {
-                          line-height: 1.1;
-                        }
-
-                        @include media('<phone') {
-                          line-height: 1.40;
-                          letter-spacing: 1px;
-                        }
-                      }
-
-                      .price {
-                        margin-top: 10px;
-                        color: $blue;
-                        letter-spacing: 1.3px;
-
-                        @include media('<laptop') {
-                          margin-top: 5px;
-                          line-height: 1.9;
-                          letter-spacing: 1px;
-                        }
-
-                        @include media('<phone') {
-                          margin-top: 0px;
-                          letter-spacing: 1px;
-                          line-height: 1.43px;
-                        }
-
+                      @include media('<phone') {
+                        margin-top: 0px;
+                        letter-spacing: 1px;
+                        line-height: 1.43px;
                       }
                     }
                   }
-                
-
-
+                }
               }
-
-
             }
           }
         }

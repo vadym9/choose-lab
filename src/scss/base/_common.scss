@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 39px;
+  max-width: 1338px;
+
+  @include media('<phone') {
+    padding: 0 20px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+
+.aic {
+  align-items: center;
+}
+
+.fd-column {
+  flex-direction: column;
+}

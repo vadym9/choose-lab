@@ -1,0 +1,339 @@
+.second-stage .container .items {
+  margin-top: 200px;
+
+  @include media('<laptop') {
+    margin-top: 148px;
+  }
+
+  @include media('<phone') {
+    margin-top: 138px;
+  }
+
+  .item .three-blocks {
+    padding: 18px;
+    border: solid 2px $border-gray;
+    min-height: 96px;
+
+    @include media('<laptop') {
+      min-height: 134px;
+    }
+
+    @include media('<phone') {
+      flex-direction: column;
+      min-height: 332px;
+    }
+
+    .left-block {
+      height: 42px;
+
+      @include media('<phone') {
+        height: 34px;
+      }
+
+      img {
+        width: 42px;
+        margin-left: 10px;
+
+        @include media('<laptop') {
+          width: 44px;
+          margin-left: 0;
+        }
+
+        @include media('<phone') {
+          width: 34px;
+        }
+      }
+    }
+
+    .center-block {
+      flex: 1;
+      padding-top: 9px;
+
+      @include media('<laptop') {
+        padding-top: 10px;
+      }
+
+      .two-columns {
+        @include media('<phone') {
+          flex-direction: column;
+        }
+
+        .left-column {
+          width: 331px;
+          margin-left: 23px;
+
+          @include media('<laptop') {
+            margin-left: 20px;
+            width: 462px;
+          }
+
+          @include media('<phone') {
+            margin-left: 0px;
+            min-width: 190px;
+            max-width: 462px;
+            width: 100%;
+          }
+
+          .title {
+
+            h2 {
+              letter-spacing: 0.8px;
+
+              @include media('<laptop') {
+                font-size: 16px;
+                line-height: 1.6;
+              }
+
+              @include media('<phone') {
+                font-size: 18px;
+                line-height: 1.35;
+              }
+
+            }
+          }
+
+          .info {
+            margin-top: 10px;
+
+            .miles {
+              color: $light-gray;
+            }
+
+            .details-link {
+              margin-left: 20px;
+              text-decoration: none;
+              color: $light-blue;
+
+              .details {
+                position: relative;
+                padding-right: 18px;
+                letter-spacing: 0.7px;
+
+                &:after {
+                  position: absolute;
+                  font-family: "icomoon";
+                  content: "\ea3b";
+                  font-size: 10px;
+                  right: 0px;
+                  top: 50%;
+                  transform: translateY(-50%)
+                }
+              }
+            }
+          }
+        }
+
+        .right-column {
+          margin-left: 144px;
+
+          @include media('<desktop') {
+            margin-left: 0;
+            flex: 1;
+          }
+
+          @include media('<laptop') {
+            margin-left: 20px;
+            justify-content: flex-start;
+          }
+
+          @include media('<phone') {
+            margin-left: 0px;
+          }
+
+          form {
+            min-width: 315px;
+
+            @include media('<laptop') {
+              flex-direction: row;
+              min-width: 427px;
+            }
+
+            @include media('<phone') {
+              flex-direction: column;
+              flex: 1;
+              min-width: 190px;
+              width: auto;
+            }
+
+            .form-title {
+              text-transform: uppercase;
+              color: $gray;
+
+              @include media('<laptop') {
+                width: 85px;
+                margin-top: 20px;
+                letter-spacing: 0px;
+                line-height: 1.5;
+              }
+
+              @include media('<phone') {
+                width: auto;
+                line-height: 1.6;
+              }
+            }
+
+            .three-options {
+              margin-top: 10px;
+
+              @include media('<laptop') {
+                flex: 1;
+                margin-top: 20px;
+                margin-left: 30px;
+              }
+
+              @include media('<phone') {
+                height: 0;
+                margin-left: 0px;
+                flex-direction: column;
+                margin-top: 10px;
+              }
+
+
+              input[type='radio'] {
+                opacity: 0;
+                margin-top: 1px;
+                cursor: pointer;
+
+                height: 16px;
+                width: 16px;
+                margin: 0px;
+                padding: 0px;
+
+                @include media('<phone') {
+                  margin-left: 22px;
+                }
+
+                +label {
+
+                  
+                  position: relative;
+                  display: inline-block;
+                  cursor: pointer;
+
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    left: -32px;
+                    width: 14px;
+                    height: 14px;
+                    background: transparent;
+                    border-radius: 50%;
+                    border: 2px solid $transparent-blue;
+
+                    @include media('<phone'){
+                      left: -2px;
+                    }
+                  }
+
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    left: -28px;
+                    top: 4px;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+
+                    @include media('<phone'){
+                      top:13px;
+                      left: 2px;
+                    }
+                  }
+                }
+
+                &:checked {
+                  +label::after {
+                    background: $light-blue;
+                    transition: 0.5s background;
+                  }
+                }
+
+                &:focus {
+                  +label::before {
+                    box-shadow: 0 0px 8px $light-blue;
+                  }
+                }
+              }
+
+              .label {
+
+                @include media('<phone') {
+                  padding: 9px 0;
+                  align-items: center;
+                  border-bottom: solid 1px $border-gray;
+
+                  &:nth-child(2){
+                    border-top: solid 1px $border-gray;
+                  }
+                }
+
+                
+                 
+                .data {
+                  margin-left: 0px;
+
+                  @include media('<phone') {
+                    flex-direction: row;
+                    flex: 1;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 28px;
+                  }
+
+                  .time {
+                    color: $blue;
+
+                    @include media('<laptop') {
+                      line-height: 1.1;
+                    }
+
+                    @include media('<phone') {
+                      line-height: 1.40;
+                      letter-spacing: 1px;
+                    }
+                  }
+
+                  .price {
+                    margin-top: 10px;
+                    color: $blue;
+                    letter-spacing: 1.3px;
+
+                    @include media('<laptop') {
+                      margin-top: 5px;
+                      line-height: 1.9;
+                      letter-spacing: 1px;
+                    }
+
+                    @include media('<phone') {
+                      margin-top: 0px;
+                      letter-spacing: 1px;
+                      line-height: 1.43px;
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-block {
+      margin-right: 4px;
+
+      @include media('<laptop') {
+        align-items: flex-start;
+        margin-right: 0;
+        padding-top: 5px;
+      }
+
+      @include media('<phone') {
+        align-items: center;
+        padding-top: 20px;
+        justify-content: center;}
+    }
+  }
+}

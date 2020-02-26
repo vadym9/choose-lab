@@ -1,0 +1,24 @@
+$blue: #262e4f;
+$light-blue: #2c49c5;
+$transparent-blue: #e4e8f0;
+$border-gray: #e4e8f0;
+$gray: #7d8295;
+$transparent-gray: #d4d5dc;
+$light-gray: #9296a6;
+
+$phone: 768px;
+$laptop: 992px;
+$desktop: 1418px;
+
+$breakpoints: ('phone': $phone,
+    'laptop': $laptop,
+    'desktop': $desktop);
+
+$media-expressions: ('screen': 'screen',
+    'print': 'print',
+    'handheld': 'handheld',
+    'landscape': '(orientation: landscape)',
+    'portrait': '(orientation: portrait)',
+    'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+    'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);

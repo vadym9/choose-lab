@@ -189,132 +189,154 @@
               }
 
 
-              input[type='radio'] {
-                opacity: 0;
-                margin-top: 1px;
-                cursor: pointer;
 
-                height: 16px;
-                width: 16px;
-                margin: 0px;
-                padding: 0px;
 
-                @include media('<phone') {
-                  margin-left: 22px;
-                }
+              // &#emsl-id {
+              //   label:first-child() {
+              //     border: 2px solid red !important;
+              //   }
+              // }
+              .radio-wrapper {
 
-                +label {
-
-                  
-                  position: relative;
-                  display: inline-block;
+                input[type='radio'] {
+                  opacity: 0;
                   cursor: pointer;
+                  height: 18px;
+                  width: 18px;
+                  margin: 0px;
+                  padding: 0px;
 
-                  &::before {
-                    content: '';
-                    position: absolute;
+                  +label {
+
+
+                    position: relative;
                     display: inline-block;
-                    left: -32px;
-                    width: 14px;
-                    height: 14px;
-                    background: transparent;
-                    border-radius: 50%;
-                    border: 2px solid $transparent-blue;
+                    cursor: pointer;
 
-                    @include media('<phone'){
-                      left: -2px;
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      display: inline-block;
+                      left: -18px;
+                      width: 14px;
+                      height: 14px;
+                      background: transparent;
+                      border-radius: 50%;
+                      border: 2px solid $transparent-blue;
+
+                      @include media('<phone') {
+                        left: -18px;
+                      }
+                    }
+
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      display: inline-block;
+                      left: -14px;
+                      top: 4px;
+                      border-radius: 50%;
+                      width: 10px;
+                      height: 10px;
+
+                      @include media('<phone') {
+                        top: 4;
+                        // transform: translateY(-50%);
+                        left: -14px;
+                      }
                     }
                   }
 
-                  &::after {
-                    content: '';
-                    position: absolute;
-                    display: inline-block;
-                    left: -28px;
-                    top: 4px;
-                    border-radius: 50%;
-                    width: 10px;
-                    height: 10px;
+                  &:checked {
+                    +label::after {
+                      background: $light-blue;
+                      transition: 0.5s background;
+                    }
+                  }
 
-                    @include media('<phone'){
-                      top:13px;
-                      left: 2px;
+                  &:focus {
+                    +label::before {
+                      box-shadow: 0 0px 8px $light-blue;
                     }
                   }
                 }
-
-                &:checked {
-                  +label::after {
-                    background: $light-blue;
-                    transition: 0.5s background;
-                  }
-                }
-
-                &:focus {
-                  +label::before {
-                    box-shadow: 0 0px 8px $light-blue;
-                  }
-                }
-              }
-
-              .label {
 
                 @include media('<phone') {
                   padding: 9px 0;
                   align-items: center;
                   border-bottom: solid 1px $border-gray;
+                  // width: 100%;
 
-                  &:nth-child(2){
+                  &:first-child {
                     border-top: solid 1px $border-gray;
+                    // background-color: gray;
                   }
                 }
+                  .label {
 
+
+                    // &:nth-child(4) {
+                    //   border-top: solid 4px red;
+                    // }
+
+                    @include media('<phone') {
+                      width: 100%;
+                    }
+
+                    .data {
+                      margin-left: 10px;
+                      // background-color: red;
+                      @include media('<laptop'){
+                        margin-left: 10px;
+                      }
+                      @include media('<phone') {
+                        flex-direction: row;
+                        flex: 1;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-left: 10px;
+                        // margin-left: 28px;
+                      }
+
+                      .time {
+                        color: $blue;
+
+                        @include media('<laptop') {
+                          line-height: 1.1;
+                        }
+
+                        @include media('<phone') {
+                          line-height: 1.40;
+                          letter-spacing: 1px;
+                        }
+                      }
+
+                      .price {
+                        margin-top: 10px;
+                        color: $blue;
+                        letter-spacing: 1.3px;
+
+                        @include media('<laptop') {
+                          margin-top: 5px;
+                          line-height: 1.9;
+                          letter-spacing: 1px;
+                        }
+
+                        @include media('<phone') {
+                          margin-top: 0px;
+                          letter-spacing: 1px;
+                          line-height: 1.43px;
+                        }
+
+                      }
+                    }
+                  }
                 
-                 
-                .data {
-                  margin-left: 0px;
 
-                  @include media('<phone') {
-                    flex-direction: row;
-                    flex: 1;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-left: 28px;
-                  }
 
-                  .time {
-                    color: $blue;
-
-                    @include media('<laptop') {
-                      line-height: 1.1;
-                    }
-
-                    @include media('<phone') {
-                      line-height: 1.40;
-                      letter-spacing: 1px;
-                    }
-                  }
-
-                  .price {
-                    margin-top: 10px;
-                    color: $blue;
-                    letter-spacing: 1.3px;
-
-                    @include media('<laptop') {
-                      margin-top: 5px;
-                      line-height: 1.9;
-                      letter-spacing: 1px;
-                    }
-
-                    @include media('<phone') {
-                      margin-top: 0px;
-                      letter-spacing: 1px;
-                      line-height: 1.43px;
-                    }
-
-                  }
-                }
               }
+
+
             }
           }
         }
@@ -333,7 +355,8 @@
       @include media('<phone') {
         align-items: center;
         padding-top: 20px;
-        justify-content: center;}
+        justify-content: center;
+      }
     }
   }
 }
